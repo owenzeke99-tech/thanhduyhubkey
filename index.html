@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080511">
+<title>ThanhDuyHub Key</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #a855f7;
+  --pink: #e040fb;
+  --bg: #080511;
+  --text: #f8f5ff;
+  --muted: #aaa2c2;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 15px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 50% 20%,
+      rgba(113, 35, 190, .22), transparent 48%),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .35;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, #e879ff 99%, transparent),
+    radial-gradient(2px 2px at 80% 65%, #a855f7 99%, transparent),
+    radial-gradient(2px 2px at 45% 80%, #fff 99%, transparent);
+  background-size: 190px 190px;
+  animation: stars 16s linear infinite;
+}
+
+@keyframes stars {
+  from { background-position: 0 0; }
+  to { background-position: 190px 190px; }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+  animation: appear .9s ease both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+  padding: 0 4px;
+}
+
+.brand {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+}
+
+.brand span {
+  color: var(--pink);
+}
+
+.subtitle, .power {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.power {
+  text-align: right;
+  line-height: 1.6;
+}
+
+.power strong {
+  color: var(--pink);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: -23px;
+  position: relative;
+  z-index: 2;
+}
+
+.crown {
+  color: #fff;
+  font-size: 37px;
+  filter: drop-shadow(0 0 14px var(--pink));
+  animation: crownGlow 3s ease-in-out infinite;
+}
+
+@keyframes crownGlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.logo {
+  width: 118px;
+  height: 118px;
+  margin: 6px auto 0;
+  border: 2px solid #d946ef;
+  border-radius: 35px;
+  transform: rotate(-5deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #35105a, #10091f 70%);
+  box-shadow: 0 0 25px #a855f755, inset 0 0 22px #a855f722;
+}
+
+.logo span {
+  transform: rotate(5deg);
+  font-size: 43px;
+  font-weight: 1000;
+  letter-spacing: -5px;
+  color: white;
+  text-shadow: 0 0 15px var(--pink);
+}
+
+.hero h1 {
+  margin-top: 15px;
+  font-size: clamp(28px, 6vw, 43px);
+  line-height: 1.1;
+  font-weight: 1000;
+  font-style: italic;
+  letter-spacing: -1px;
+  text-shadow: 0 3px 0 #54118c, 0 0 20px #c026d355;
+}
+
+.hero h1 span {
+  color: #e879f9;
+}
+
+.key-label {
+  display: inline-block;
+  margin-top: 7px;
+  color: #f0abfc;
+  letter-spacing: 7px;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.card {
+  border: 1px solid #9b4de7;
+  border-radius: 26px;
+  padding: 52px 28px 25px;
+  background: linear-gradient(
+    145deg,
+    rgba(19, 12, 35, .97),
+    rgba(6, 5, 16, .98)
+  );
+  box-shadow:
+    0 0 35px #7e22ce22,
+    inset 0 0 25px #a855f70a;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f0abfc, transparent);
+}
+
+.lock {
+  font-size: 40px;
+  text-align: center;
+  color: #d946ef;
+  filter: drop-shadow(0 0 12px #d946ef88);
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: clamp(23px, 5vw, 33px);
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.card h2 span {
+  background: linear-gradient(90deg, #d946ef, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  max-width: 440px;
+  margin: 0 auto 25px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.key-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px;
+  min-width: 0;
+  border: 1px solid #49306d;
+  border-radius: 15px;
+  background: #080612;
+  transition: border-color .25s, box-shadow .25s;
+}
+
+.key-box:focus-within,
+.key-box:hover {
+  border-color: #c084fc;
+  box-shadow: 0 0 18px #a855f722;
+}
+
+#keyText {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f5eaff;
+  font-size: 14px;
+  font-family: monospace;
+  overflow-wrap: anywhere;
+}
+
+.icon-copy {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d946ef;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #a855f7, #6d28d9);
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.icon-copy:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #d946ef88;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: min(100%, 290px);
+  min-height: 57px;
+  margin: 22px auto 29px;
+  border: 1px solid #f0abfc;
+  border-radius: 50px;
+  background: linear-gradient(100deg, #a855f7, #7c19e8, #d946ef);
+  background-size: 200% 100%;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 0 24px #a855f755;
+  transition: transform .25s, box-shadow .25s;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.copy-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 32px #d946ef88;
+}
+
+.copy-button:active {
+  transform: scale(.97);
+}
+
+.copy-button .copy-icon {
+  font-size: 23px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid #302044;
+  border-radius: 17px;
+  padding: 20px 4px;
+  background: #090713;
+}
+
+.feature {
+  text-align: center;
+  padding: 0 4px;
+  border-right: 1px solid #251932;
+}
+
+.feature:last-child {
+  border-right: none;
+}
+
+.feature .symbol {
+  display: block;
+  font-size: 26px;
+  color: #d946ef;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px #a855f766;
+}
+
+.feature strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.feature small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.footer {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.signature {
+  font-size: 27px;
+  font-weight: 900;
+  font-style: italic;
+  color: #d946ef;
+  text-shadow: 0 0 15px #a855f755;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 9px;
+  letter-spacing: 1px;
+}
+
+.toast {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  bottom: 25px;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 13px 20px;
+  border: 1px solid #c084fc;
+  border-radius: 14px;
+  background: #180d29;
+  color: white;
+  box-shadow: 0 0 25px #a855f744;
+  transition: .3s ease;
+  font-size: 14px;
+  text-align: center;
+  width: max-content;
+  max-width: calc(100% - 30px);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 480px) {
+  body { padding: 20px 12px; }
+  .topbar { margin-bottom: 23px; }
+  .brand { font-size: 16px; }
+  .power { font-size: 10px; }
+  .logo { width: 95px; height: 95px; border-radius: 28px; }
+  .logo span { font-size: 36px; }
+  .card { padding: 47px 15px 18px; border-radius: 22px; }
+  .description { font-size: 13px; }
+  #keyText { font-size: 12px; }
+  .icon-copy { width: 40px; height: 40px; }
+  .features { padding: 17px 1px; }
+  .feature .symbol { font-size: 23px; }
+  .feature strong { font-size: 11px; }
+  .feature small { font-size: 9px; }
+}
+</style>
+</head>
+
+<body>
+<main class="wrapper">
+
+  <header class="topbar">
+    <div>
+      <div class="brand">ThanhDuy<span>Hub</span></div>
+      <div class="subtitle">✦ Premium Access</div>
+    </div>
+    <div class="power">
+      ♛ More Power<br>
+      <strong>Better Experience</strong>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="crown">♛</div>
+    <div class="logo"><span>TD</span></div>
+    <h1>THANHDUY<span>HUB</span></h1>
+    <div class="key-label">— KEY —</div>
+  </section>
+
+  <section class="card">
+    <div class="lock">♙</div>
+
+    <h2>Welcome to <span>ThanhDuyHub</span></h2>
+    <p class="description">
+      Your key is ready. Copy it below to get started
+      and access your key whenever you need it.
+    </p>
+
+    <div class="key-box">
+      <input
+        id="keyText"
+        type="text"
+        value="ThanhDuyHubKeyKalwowjneKalqpwjwbwkiehwb"
+        readonly
+        aria-label="Your key"
+      >
+      <button class="icon-copy" id="smallCopy"
+        aria-label="Copy key" title="Copy Key">▢</button>
+    </div>
+
+    <button class="copy-button" id="copyButton">
+      <span class="copy-icon">▢</span>
+      <span id="buttonText">Copy Key</span>
+    </button>
+
+    <div class="features">
+      <div class="feature">
+        <span class="symbol">ϟ</span>
+        <strong>Fast</strong>
+        <small>Performance</small>
+      </div>
+      <div class="feature">
+        <span class="symbol">♢</span>
+        <strong>Secure</strong>
+        <small>&amp; Safe</small>
+      </div>
+      <div class="feature">
+        <span class="symbol">♛</span>
+        <strong>Premium</strong>
+        <small>Access</small>
+      </div>
+      <div class="feature">
+        <span class="symbol">♡</span>
+        <strong>Always</strong>
+        <small>Updated</small>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="signature">ThanhDuyHub</div>
+    <div class="tagline">— &nbsp; Unlock Your Potential &nbsp; —</div>
+  </footer>
+
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const keyInput = document.getElementById("keyText");
+const copyButton = document.getElementById("copyButton");
+const smallCopy = document.getElementById("smallCopy");
+const buttonText = document.getElementById("buttonText");
+const toast = document.getElementById("toast");
+
+let toastTimer;
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2200);
+}
+
+async function copyKey() {
+  const key = keyInput.value;
+
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(key);
+    } else {
+      keyInput.focus();
+      keyInput.select();
+      keyInput.setSelectionRange(0, key.length);
+
+      const success = document.execCommand("copy");
+      if (!success) throw new Error("Copy failed");
+      window.getSelection()?.removeAllRanges();
+    }
+
+    buttonText.textContent = "Copied Successfully!";
+    copyButton.querySelector(".copy-icon").textContent = "✓";
+    showToast("✓ Key copied successfully!");
+
+    setTimeout(() => {
+      buttonText.textContent = "Copy Key";
+      copyButton.querySelector(".copy-icon").textContent = "▢";
+    }, 2000);
+
+  } catch (error) {
+    showToast("Please select and copy the key manually.");
+    keyInput.focus();
+    keyInput.select();
+  }
+}
+
+copyButton.addEventListener("click", copyKey);
+smallCopy.addEventListener("click", copyKey);
+</script>
+
+</body>
+</html>
